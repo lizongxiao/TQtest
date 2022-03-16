@@ -1,0 +1,551 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/*已经访问过的链接*/
+
+a:visited {
+    text-decoration: none;
+}
+
+
+/*鼠标划过(停留)的链接*/
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* 正在点击的链接*/
+
+a:active {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 头部 */
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+
+/* 头部盒子 */
+
+.header_box {
+    position: relative;
+    width: 1142px;
+    height: 100%;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 头部logo */
+
+.header_logo {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    background-color: #fc2015;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+
+/* 登录/退出按钮 */
+
+.header_login {
+    width: 110px;
+    height: 40px;
+    background-color: #fc2015;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* 系统设置 */
+
+.header_logo::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 40px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    color: #676a6c;
+    background-image: url(./images/systemSet.png);
+    cursor: pointer;
+}
+
+
+/* 系统消息 */
+
+.header_login::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 40px;
+    right: 150px;
+    width: 20px;
+    height: 20px;
+    color: #676a6c;
+    background-image: url(./images/message.png);
+}
+
+
+/* 主体 */
+
+main {
+    height: 1277px;
+    width: 100%;
+    background-color: #f5f8f9;
+}
+
+
+/*  设置主体宽度 */
+
+.main_body {
+    margin: 0 auto;
+    width: 1142px;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+
+/* 主体头部 */
+
+.main_header {
+    display: flex;
+    width: 100%;
+    height: 169px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+/* 主体标题 */
+
+.main_title {
+    display: flex;
+    width: 275;
+    height: 169px;
+    /* border: 1px solid pink; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_title h1 {
+    font-weight: 200;
+}
+
+.main_title h6 {
+    font-weight: 100;
+}
+
+
+/* 主体导航 */
+
+.main_nav {
+    display: flex;
+    width: 470px;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.main_nav li {
+    /* border: 1px solid red; */
+    flex: 1;
+    height: 32px;
+    margin-top: 88px;
+    font-size: 10px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navStyle {
+    border-bottom: 1px solid #d1d4d5;
+}
+
+#navStyle {
+    border-bottom: 1px solid #d1d4d5;
+}
+
+
+/* 主体轮播图与信息表 */
+
+.main_box {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 290px;
+    /* border: 1px solid pink; */
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+
+/* 轮播图 */
+
+.main_carousel {
+    width: 543px;
+    border: 4px solid #fff;
+    position: relative;
+    box-sizing: content-box;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* 轮播图左右按钮 */
+
+.pre {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 20;
+    cursor: pointer;
+    background-color: #676a6c;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 20;
+    cursor: pointer;
+    background-color: #676a6c;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+/* 轮播图底部小圆圈 */
+
+.carousel_circle {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    left: 38%;
+    height: auto;
+    align-items: center;
+}
+
+.carousel_circle li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    /*background-color: #fff;*/
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 30%;
+    background-color: #c1c4c6;
+    cursor: pointer;
+}
+
+
+/* 小圆圈默认选中 */
+
+#current {
+    background-color: #fff;
+    height: 16px;
+}
+
+
+/* 轮播图图片盒子 */
+
+.carousel_img {
+    display: flex;
+    width: 600%;
+    position: relative;
+}
+
+.carousel_img li {
+    height: 290px;
+    width: 535px;
+}
+
+.carousel_img li img {
+    height: inherit;
+    width: inherit;
+}
+
+
+/* 信息表 */
+
+.main_char {
+    width: 560px;
+    height: 100%;
+    /* border: 1px solid red; */
+    background-color: #fff;
+}
+
+
+/* 信息表标题 */
+
+.char_title {
+    display: flex;
+    width: 100%;
+    height: 112px;
+    /* border-color: red; */
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #d1d4d5;
+    align-items: center;
+}
+
+.char_title h3 {
+    font-weight: 500;
+    margin-left: 49px;
+}
+
+.char_title button {
+    margin-left: 190px;
+    text-align: center;
+    width: 96px;
+    height: 40px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 0.1px;
+    cursor: pointer;
+}
+
+
+/* 信息表格 */
+
+.char_info {
+    width: 100%;
+    height: 179px;
+}
+
+.char_table {
+    display: flex;
+    padding: 0 50px 50px 30px;
+    box-sizing: border-box;
+}
+
+.char_table .first_tr {
+    display: flex;
+    display: inline-block;
+}
+
+.char_table .first_tr td:nth-child(1) {
+    display: inline-block;
+    margin-left: 50px;
+    flex: 1;
+}
+
+.char_table .first_tr td:nth-child(2) {
+    display: inline-block;
+    margin-left: 90px;
+    flex: 1;
+}
+
+.char_table .first_tr td:nth-child(3) {
+    display: inline-block;
+    margin-left: 110px;
+    flex: 3;
+}
+
+.char_table tr {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.char_table tr td:nth-child(1) {
+    display: inline-block;
+    margin-left: 50px;
+    flex: 1;
+}
+
+.char_table tr td:nth-child(2) {
+    display: inline-block;
+    margin-left: 50px;
+    flex: 1;
+}
+
+.char_table tr td:nth-child(3) {
+    display: inline-block;
+    margin-left: 80px;
+    flex: 3;
+}
+
+.char_table tr td:nth-child(3) button {
+    width: 65px;
+    height: 30px;
+    background-color: #58d24c;
+    color: #fff;
+    border: 0;
+}
+
+
+/* echarts曲线图 */
+
+.echarts_line {
+    width: inherit;
+    height: 352px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+
+/* 饼形图 */
+
+.echarts_pie {
+    float: left;
+    width: 562px;
+    height: 382px;
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+
+/* 柱状图 */
+
+.echarts_bar {
+    float: right;
+    width: 545px;
+    height: 382px;
+    background-color: #fff;
+    margin-top: 15px;
+    margin-left: 23px;
+}
+
+
+/* 底部 */
+
+footer {
+    height: 290px;
+    width: 100%;
+    background-color: #202124;
+}
+
+
+/*底部主体 */
+
+.footer_box {
+    margin: 0 auto;
+    width: 1142px;
+    height: 100%;
+    position: relative;
+}
+
+
+/* 底部logo */
+
+.header_logo_2 {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    background-color: #fc2015;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+
+
+/* 底部链接 */
+
+.link_box {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.link_box .link_ul_1 {
+    position: absolute;
+    left: 20%;
+}
+
+.link_box .link_ul_1 li {
+    margin-top: 15px;
+}
+
+.link_box .link_ul_1 li a {
+    color: #fff;
+}
+
+.link_box .link_ul_2 {
+    position: absolute;
+    left: 35%;
+}
+
+.link_box .link_ul_2 li {
+    margin-top: 15px;
+}
+
+.link_box .link_ul_2 li a {
+    color: #fff;
+}
+
+.link_box .link_ul_3 {
+    position: absolute;
+    left: 50%;
+}
+
+.link_box .link_ul_3 li {
+    margin-top: 15px;
+}
+
+.link_box .link_ul_3 li a {
+    color: #fff;
+}
+
+.link_box .link_ul_4 {
+    position: absolute;
+    left: 65%;
+}
+
+.link_box .link_ul_4 li {
+    margin-top: 15px;
+}
+
+.link_box .link_ul_4 li a {
+    color: #fff;
+}
+
+.link_box .link_ul_5 {
+    position: absolute;
+    left: 80%;
+}
+
+.link_box .link_ul_5 li {
+    margin-top: 15px;
+}
+
+.link_box .link_ul_5 li a {
+    color: #fff;
+}
